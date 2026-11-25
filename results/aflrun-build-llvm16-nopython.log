@@ -1,0 +1,290 @@
+[*] Compiling afl++ for OS Linux on ARCH x86_64
+rm -rf afl-fuzz afl-showmap afl-tmin afl-gotcpu afl-analyze afl-fuzz-document afl-as as afl-g++ afl-clang afl-clang++ *.o src/*.o *~ a.out core core.[1-9][0-9]* *.stackdump .test .test1 .test2 test-instr .test-instr0 .test-instr1 afl-cs-proxy afl-qemu-trace afl-gcc-fast afl-g++-fast ld *.so *.8 test/unittests/*.o test/unittests/unit_maybe_alloc test/unittests/preallocable .afl-* afl-gcc afl-g++ afl-clang afl-clang++ test/unittests/unit_hash test/unittests/unit_rand *.dSYM lib*.a
+make -f GNUmakefile.llvm clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun'
+GNUmakefile.llvm:68: you are using an in-development llvm version - this might break llvm_mode!
+[+] llvm_mode detected llvm 10+, enabling neverZero implementation and c++14
+[+] llvm_mode detected llvm 11+, enabling afl-lto LTO implementation
+GNUmakefile.llvm:233: clang option -flto is not working - maybe LLVMgold.so not found - cannot enable LTO mode
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]* .test2 test-instr .test-instr0 .test-instr1 *.dwo
+rm -f ./afl-cc ./aflrun-cc ./afl-compiler-rt.o ./afl-compiler-rt-32.o ./afl-compiler-rt-64.o ./afl-llvm-pass.so ./lto-marker.so ./SanitizerCoveragePCGUARD.so ./split-switches-pass.so ./cmplog-routines-pass.so ./cmplog-instructions-pass.so ./cmplog-switches-pass.so ./afl-llvm-dict2file.so ./compare-transform-pass.so ./afl-ld-lto ./afl-llvm-lto-instrumentlist.so ./SanitizerCoverageLTO.so afl-common.o ./afl-c++ ./afl-lto ./afl-lto++ ./afl-clang-lto* ./afl-clang-fast* ./afl-clang*.8 ./ld ./afl-ld ./afl-compiler-rt*.o ./afl-llvm-rt*.o instrumentation/*.o
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun'
+make -f GNUmakefile.gcc_plugin clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]* test-instr .test-instr0 .test-instr1 .test2
+rm -f ./afl-gcc-pass.so ./afl-gcc-cmplog-pass.so ./afl-gcc-cmptrs-pass.so ./afl-compiler-rt.o ./afl-compiler-rt-32.o ./afl-compiler-rt-64.o afl-common.o ./afl-g++-fast ./afl-g*-fast.8 instrumentation/*.o
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun'
+make -C utils/libdislocator clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/libdislocator'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -f ../../libdislocator.so
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/libdislocator'
+make -C utils/libtokencap clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/libtokencap'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -fv ../../libtokencap.so
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/libtokencap'
+make -C utils/aflpp_driver clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/aflpp_driver'
+rm -f *.o libAFLDriver*.a libAFLQemuDriver.a aflpp_qemu_driver_hook.so *~ core aflpp_driver_test
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/aflpp_driver'
+make -C utils/afl_network_proxy clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/afl_network_proxy'
+rm -f afl-network-client afl-network-server *~ core
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/afl_network_proxy'
+make -C utils/socket_fuzzing clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/socket_fuzzing'
+rm -f socketfuzz32.so socketfuzz64.so
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/socket_fuzzing'
+make -C utils/argv_fuzzing clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/argv_fuzzing'
+rm -f argvfuzz32.so argvfuzz64.so argv_fuzz_demo argv_fuzz_persistent_demo
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/argv_fuzzing'
+make -C utils/plot_ui clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/plot_ui'
+rm -f afl-plot-ui
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/utils/plot_ui'
+make -C qemu_mode/unsigaction clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/unsigaction'
+rm -f unsigaction.so
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/unsigaction'
+make -C qemu_mode/fastexit clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/fastexit'
+rm -f fastexit.so
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/fastexit'
+make -C qemu_mode/libcompcov clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/libcompcov'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -f ../../libcompcov.so compcovtest
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/libcompcov'
+make -C qemu_mode/libqasan clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/libqasan'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -f ../../libqasan.so
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/qemu_mode/libqasan'
+make -C frida_mode clean
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun/frida_mode'
+rm -rf /home/sylei/RL_miniproject/backend/AFLRun/frida_mode/build/
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun/frida_mode'
+rm -rf nyx_mode/packer/linux_initramfs/init.cpio.gz nyx_mode/libnyx/libnyx/target/release/* nyx_mode/QEMU-Nyx/x86_64-softmmu/qemu-system-x86_64
+test -e coresight_mode/coresight-trace/Makefile && make -C coresight_mode/coresight-trace clean || true
+test -e qemu_mode/qemuafl/Makefile && make -C qemu_mode/qemuafl clean || true
+test -e unicorn_mode/unicornafl/Makefile && make -C unicorn_mode/unicornafl clean || true
+test -e nyx_mode/QEMU-Nyx/Makefile && make -C nyx_mode/QEMU-Nyx clean || true
+[*] Checking for the default compiler cc...
+[*] Testing the PATH environment variable...
+[*] Checking for the ability to compile x86 code...
+[+] shmat seems to be working.
+[-] You seem to need to install the package python3-dev or python-dev (and perhaps python[3]-apt), but it is optional so we continue
+[+] Everything seems to be working, ready to compile.
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++ -O2 -march=native -D_FORTIFY_SOURCE=1 -g -Wall -std=c++14 -I robin-hood-hashing/src/include/ -I include/   src/aflrun.cpp -c -o src/aflrun.o
+In file included from src/aflrun.cpp:21:
+robin-hood-hashing/src/include/robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+        Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+                                ^
+robin-hood-hashing/src/include/robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+#    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+                                                  ^
+robin-hood-hashing/src/include/robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+robin-hood-hashing/src/include/robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+#    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+                                                  ^
+robin-hood-hashing/src/include/robin_hood.h:1605:13: note: in instantiation of member function 'robin_hood::detail::Table<true, 80, unsigned int, double, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>::cloneData' requested here
+            cloneData(o);
+            ^
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_pair.h:688:4: note: in instantiation of member function 'robin_hood::detail::Table<true, 80, unsigned int, double, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>::Table' requested here
+        : first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y))
+          ^
+In file included from src/aflrun.cpp:21:
+robin-hood-hashing/src/include/robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+        Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+                                ^
+robin-hood-hashing/src/include/robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+#    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+                                                  ^
+robin-hood-hashing/src/include/robin_hood.h:1605:13: note: in instantiation of member function 'robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>::cloneData' requested here
+            cloneData(o);
+            ^
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/new_allocator.h:191:23: note: in instantiation of member function 'robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>::Table' requested here
+        { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+                             ^
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/alloc_traits.h:538:8: note: in instantiation of function template specialization 'std::__new_allocator<robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>>::construct<robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>, robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>> &>' requested here
+          __a.construct(__p, std::forward<_Args>(__args)...);
+              ^
+/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/vector.tcc:117:21: note: in instantiation of function template specialization 'std::allocator_traits<std::allocator<robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>>>::construct<robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>, robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>> &>' requested here
+            _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+                           ^
+src/aflrun.cpp:2528:10: note: in instantiation of function template specialization 'std::vector<robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>>::emplace_back<robin_hood::detail::Table<true, 80, unsigned int, void, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>> &>' requested here
+                groups.emplace_back(all_targets);
+                       ^
+In file included from src/aflrun.cpp:21:
+robin-hood-hashing/src/include/robin_hood.h:1445:33: warning: builtin __has_trivial_copy is deprecated; use __is_trivially_copyable instead [-Wdeprecated-builtins]
+        Cloner<Table, IsFlat && ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(Node)>()(o, *this);
+                                ^
+robin-hood-hashing/src/include/robin_hood.h:210:51: note: expanded from macro 'ROBIN_HOOD_IS_TRIVIALLY_COPYABLE'
+#    define ROBIN_HOOD_IS_TRIVIALLY_COPYABLE(...) __has_trivial_copy(__VA_ARGS__)
+                                                  ^
+robin-hood-hashing/src/include/robin_hood.h:1605:13: note: in instantiation of member function 'robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>>::cloneData' requested here
+            cloneData(o);
+            ^
+robin-hood-hashing/src/include/robin_hood.h:614:11: note: in instantiation of member function 'robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>>::Table' requested here
+        , second(std::forward<U2>(b)) {}
+          ^
+robin-hood-hashing/src/include/robin_hood.h:1798:14: note: in instantiation of function template specialization 'robin_hood::detail::Table<false, 80, unsigned int, robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>>, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>::DataNode<robin_hood::detail::Table<false, 80, unsigned int, robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>>, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>, false>::DataNode<const unsigned int &, robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>> &>' requested here
+        Node n{*this, std::forward<Args>(args)...};
+             ^
+src/aflrun.cpp:3382:9: note: in instantiation of function template specialization 'robin_hood::detail::Table<false, 80, unsigned int, robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>>, robin_hood::hash<unsigned int>, std::equal_to<unsigned int>>::emplace<const unsigned int &, robin_hood::detail::Table<true, 80, (anonymous namespace)::Fringe, void, robin_hood::hash<(anonymous namespace)::Fringe>, std::equal_to<(anonymous namespace)::Fringe>> &>' requested here
+                                ret.emplace(*t, decisives);
+                                    ^
+src/aflrun.cpp:899:16: warning: unused function 'to_fringe_block<unsigned int>' [-Wunused-function]
+inline reach_t to_fringe_block<reach_t>(const reach_t& f)
+               ^
+src/aflrun.cpp:2349:16: warning: unused function 'to_cluster_target' [-Wunused-function]
+inline reach_t to_cluster_target(const Fringe& t)
+               ^
+6 warnings generated.
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -c src/afl-common.c -o src/afl-common.o
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -c src/afl-sharedmem.c -o src/afl-sharedmem.o
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -c src/afl-forkserver.c -o src/afl-forkserver.o
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" -march=native -D_FORTIFY_SOURCE=1 -Iinclude -c src/afl-performance.c -o src/afl-performance.o
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"   src/afl-fuzz-bitmap.c src/afl-fuzz.c src/afl-fuzz-cmplog.c src/afl-fuzz-extras.c src/afl-fuzz-init.c src/afl-fuzz-mutators.c src/afl-fuzz-one.c src/afl-fuzz-python.c src/afl-fuzz-queue.c src/afl-fuzz-redqueen.c src/afl-fuzz-run.c src/afl-fuzz-state.c src/afl-fuzz-stats.c src/afl-fuzz-statsd.c src/afl-common.o src/afl-sharedmem.o src/afl-forkserver.o src/afl-performance.o src/aflrun.o -o afl-fuzz  -ldl -lrt -lm -lm -lstdc++
+src/afl-fuzz-redqueen.c:1603:20: warning: variable 'cons_0' set but not used [-Wunused-but-set-variable]
+  u8  cons_ff = 0, cons_0 = 0;
+                   ^
+1 warning generated.
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"   src/afl-showmap.c src/afl-common.o src/afl-sharedmem.o src/afl-forkserver.o src/afl-performance.o -o afl-showmap -ldl -lrt -lm
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"   src/afl-tmin.c src/afl-common.o src/afl-sharedmem.o src/afl-forkserver.o src/afl-performance.o -o afl-tmin -ldl -lrt -lm
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"   src/afl-gotcpu.c src/afl-common.o -o afl-gotcpu -ldl -lrt -lm
+src/afl-gotcpu.c:95:7: warning: variable 'loop_repeats' set but not used [-Wunused-but-set-variable]
+  s32 loop_repeats = 0;
+      ^
+1 warning generated.
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"   src/afl-analyze.c src/afl-common.o src/afl-sharedmem.o src/afl-performance.o src/afl-forkserver.o -o afl-analyze -ldl -lrt -lm
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" src/afl-as.c -o afl-as -ldl -lrt -lm
+make -j -f GNUmakefile.llvm
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun'
+GNUmakefile.llvm:68: you are using an in-development llvm version - this might break llvm_mode!
+[+] llvm_mode detected llvm 10+, enabling neverZero implementation and c++14
+[+] llvm_mode detected llvm 11+, enabling afl-lto LTO implementation
+GNUmakefile.llvm:233: clang option -flto is not working - maybe LLVMgold.so not found - cannot enable LTO mode
+[+] shmat seems to be working.
+[*] Checking for working 'llvm-config'...
+[*] Checking for working '/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang'...
+[*] Checking for matching versions of '/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang' and '/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/llvm-config'
+[*] We have llvm-config version 16.0.3 with a clang version 16.0.3, good.
+[*] Checking for './afl-showmap'...
+[+] All set and ready to build.
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/lib\" -DLLVM_VERSION=\"16.0.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang\" -DCLANGPP_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function -fdebug-prefix-map="/home/sylei/RL_miniproject/backend/AFLRun=llvm_mode" -Wno-deprecated  -c src/afl-common.c -o instrumentation/afl-common.o 
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -I/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include -I/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/../include -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/lib\" -DLLVM_VERSION=\"16.0.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang\" -DCLANGPP_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function -fdebug-prefix-map="/home/sylei/RL_miniproject/backend/AFLRun=llvm_mode" -Wno-deprecated  src/afl-cc.c instrumentation/afl-common.o -o afl-cc -DLLVM_MINOR=3 -DLLVM_MAJOR=16  -DCFLAGS_OPT=\"\" -lm
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -I/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include -I/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/../include -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/lib\" -DLLVM_VERSION=\"16.0.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang\" -DCLANGPP_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function -fdebug-prefix-map="/home/sylei/RL_miniproject/backend/AFLRun=llvm_mode" -Wno-deprecated  src/aflrun-cc.c -o aflrun-cc -DLLVM_MINOR=3 -DLLVM_MAJOR=16  -DCFLAGS_OPT=\"\" -lm
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang -I/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include -I/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/../include -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/lib\" -DLLVM_VERSION=\"16.0.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang\" -DCLANGPP_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function -fdebug-prefix-map="/home/sylei/RL_miniproject/backend/AFLRun=llvm_mode" -Wno-deprecated  -O3 -Wno-unused-result -fPIC -c instrumentation/afl-compiler-rt.o.c -o afl-compiler-rt.o
+[*] Building 32-bit variant of the runtime (-m32)... failed (that's fine)
+[*] Building 64-bit variant of the runtime (-m64)... success!
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++ -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/lib\" -DLLVM_VERSION=\"16.0.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang\" -DCLANGPP_BIN=\"/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function -fdebug-prefix-map="/home/sylei/RL_miniproject/backend/AFLRun=llvm_mode" -Wno-deprecated  `/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/llvm-config --cxxflags` -fno-rtti -fPIC -std=c++14 -c instrumentation/afl-llvm-common.cc -o instrumentation/afl-llvm-common.o 
+In file included from instrumentation/afl-llvm-common.cc:16:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Support/raw_ostream.h:16:
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/SmallVector.h:352:5: error: no member named 'uninitialized_move' in namespace 'std'; did you mean simply 'uninitialized_move'?
+    std::uninitialized_move(I, E, Dest);
+    ^~~~~~~~~~~~~~~~~~~~~~~
+    uninitialized_move
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/SmallVector.h:351:15: note: 'uninitialized_move' declared here
+  static void uninitialized_move(It1 I, It1 E, It2 Dest) {
+              ^
+In file included from instrumentation/afl-llvm-common.cc:16:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Support/raw_ostream.h:17:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:12:
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/DenseMapInfo.h:294:52: error: no member named 'variant' in namespace 'std'
+template <typename... Ts> struct DenseMapInfo<std::variant<Ts...>> {
+                                              ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/DenseMapInfo.h:294:60: error: 'Ts' does not refer to a value
+template <typename... Ts> struct DenseMapInfo<std::variant<Ts...>> {
+                                                           ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/DenseMapInfo.h:294:23: note: declared here
+template <typename... Ts> struct DenseMapInfo<std::variant<Ts...>> {
+                      ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/DenseMapInfo.h:294:66: error: expected unqualified-id
+template <typename... Ts> struct DenseMapInfo<std::variant<Ts...>> {
+                                                                 ^
+In file included from instrumentation/afl-llvm-common.cc:16:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Support/raw_ostream.h:17:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:13:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLFunctionalExtras.h:18:
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:46:35: error: no template named 'optional' in namespace 'std'
+auto transformOptional(const std::optional<T> &O, const Function &F)
+                             ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:47:13: error: no template named 'optional' in namespace 'std'
+    -> std::optional<decltype(F(*O))> {
+       ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:50:15: error: no member named 'nullopt' in namespace 'std'
+  return std::nullopt;
+         ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:56:6: error: redefinition of 'transformOptional' as different kind of symbol
+auto transformOptional(std::optional<T> &&O, const Function &F)
+     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:46:6: note: previous definition is here
+auto transformOptional(const std::optional<T> &O, const Function &F)
+     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:56:29: error: no member named 'optional' in namespace 'std'
+auto transformOptional(std::optional<T> &&O, const Function &F)
+                       ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:56:38: error: 'T' does not refer to a value
+auto transformOptional(std::optional<T> &&O, const Function &F)
+                                     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:55:20: note: declared here
+template <typename T, typename Function>
+                   ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:56:43: error: use of address-of-label extension outside of a function body
+auto transformOptional(std::optional<T> &&O, const Function &F)
+                                          ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:56:46: error: expected expression
+auto transformOptional(std::optional<T> &&O, const Function &F)
+                                             ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:56:64: error: expected ';' at end of declaration
+auto transformOptional(std::optional<T> &&O, const Function &F)
+                                                               ^
+                                                               ;
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/STLForwardCompat.h:57:5: error: cannot use arrow operator on a type
+    -> std::optional<decltype(F(*std::move(O)))> {
+    ^
+In file included from instrumentation/afl-llvm-common.cc:16:
+In file included from /home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Support/raw_ostream.h:17:
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:104:43: error: no type named 'string_view' in namespace 'std'
+    /*implicit*/ constexpr StringRef(std::string_view Str)
+                                     ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:248:19: error: no type named 'string_view' in namespace 'std'
+    operator std::string_view() const {
+             ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:268:14: error: use of undeclared identifier 'starts_with_insensitive'; did you mean 'startswith_insensitive'?
+      return starts_with_insensitive(Prefix);
+             ^~~~~~~~~~~~~~~~~~~~~~~
+             startswith_insensitive
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:267:24: note: 'startswith_insensitive' declared here
+    [[nodiscard]] bool startswith_insensitive(StringRef Prefix) const {
+                       ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:296:19: error: no member named 'string_view' in namespace 'std'
+      return std::string_view(*this).find(C, From);
+             ~~~~~^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:470:10: warning: constexpr if is a C++17 extension [-Wc++17-extensions]
+      if constexpr (std::numeric_limits<T>::is_signed) {
+         ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:499:10: warning: constexpr if is a C++17 extension [-Wc++17-extensions]
+      if constexpr (std::numeric_limits<T>::is_signed) {
+         ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringRef.h:624:12: error: use of undeclared identifier 'starts_with'
+      if (!starts_with(Prefix))
+           ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.
+make[1]: *** [GNUmakefile.llvm:416: instrumentation/afl-llvm-common.o] Error 1
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun'
+make: [GNUmakefile:345: llvm] Error 2 (ignored)
+make -f GNUmakefile.gcc_plugin
+make[1]: Entering directory '/home/sylei/RL_miniproject/backend/AFLRun'
+[+] shmat seems to be working.
+[*] Checking for working 'gcc'...
+[*] Checking for gcc plugin development header files...
+[-] Oops, can't find gcc header files. Be sure to install 'gcc-X-plugin-dev'.
+make[1]: *** [GNUmakefile.gcc_plugin:125: test_deps] Error 1
+make[1]: Leaving directory '/home/sylei/RL_miniproject/backend/AFLRun'
+make: [GNUmakefile:351: gcc_plugin] Error 2 (ignored)
+make: *** No rule to make target 'afl-clang-lto', needed by 'test_build'.  Stop.

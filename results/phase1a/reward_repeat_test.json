@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "repeated_target_path": {
+    "init_target_cov": 4,
+    "final_target_cov": 4,
+    "cumulative_reward": 0.0,
+    "zero_reward_target_hit_steps": 4,
+    "steps": [
+      {
+        "step_id": 1,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 2,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 3,
+        "seed_id": 0,
+        "target_hit": true,
+        "step_target_hits": 1,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 4,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 5,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 6,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 7,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 8,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 9,
+        "seed_id": 0,
+        "target_hit": true,
+        "step_target_hits": 1,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 10,
+        "seed_id": 0,
+        "target_hit": true,
+        "step_target_hits": 1,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 11,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 12,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 13,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 14,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 15,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 16,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 17,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 18,
+        "seed_id": 0,
+        "target_hit": true,
+        "step_target_hits": 1,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 19,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      },
+      {
+        "step_id": 20,
+        "seed_id": 0,
+        "target_hit": false,
+        "step_target_hits": 0,
+        "target_cov_delta": 0,
+        "target_cov_total": 4,
+        "reward": 0.0
+      }
+    ]
+  },
+  "nontarget_guard": {
+    "init_target_cov": 0,
+    "final_target_cov": 0,
+    "cumulative_reward": 0.0,
+    "nontarget_with_global_gain": 6
+  }
+}

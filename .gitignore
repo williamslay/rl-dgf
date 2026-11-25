@@ -1,0 +1,17 @@
+# Toolchains and Python virtual environment
+toolchain/
+.venv/
+.vscode/
+
+# Python caches
+**/__pycache__/
+*.py[cod]
+
+# Compiled benchmark binaries and AFLRun compile-time metadata
+benchmarks/*/target
+benchmarks/*/aflrun_tmp/
+
+# Transient AFL fuzzing work directories
+results/smoke/out/
+results/**/rl_runs/
+results/**/eval_runs/

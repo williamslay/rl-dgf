@@ -1,0 +1,18 @@
+{
+  "target": "smoke",
+  "target_bin": "/home/sylei/RL_miniproject/benchmarks/smoke-target/target",
+  "total_timesteps_requested": 2048,
+  "actual_timesteps": 2048,
+  "episode_budget": 10000,
+  "n_steps": 256,
+  "batch_size": 64,
+  "n_epochs": 10,
+  "learning_rate": 0.0003,
+  "gamma": 0.99,
+  "ent_coef": 0.01,
+  "seed": 42,
+  "wall_seconds": 46.197,
+  "episodes_completed": 46,
+  "final_model_path": "/home/sylei/RL_miniproject/results/phase1b/smoke_ppo/checkpoints/ppo_final.zip",
+  "load_verify_action": 1
+}

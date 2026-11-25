@@ -1,0 +1,983 @@
+{
+  "target": "pilot",
+  "model_path": "/home/sylei/RL_miniproject/results/phase1b/pilot_ppo/checkpoints/ppo_final.zip",
+  "n_episodes": 10,
+  "episode_budget": 15000,
+  "seed_base": 2000,
+  "summaries": {
+    "ppo_deterministic": {
+      "n_episodes": 10,
+      "mean_return": 17.6,
+      "std_return": 10.375,
+      "min_return": 0.0,
+      "max_return": 32.0,
+      "mean_target_cov": 17.6,
+      "mean_global_cov": 42.9,
+      "mean_targets_reached": 3.1,
+      "mean_queued_items": 28.5,
+      "mean_execs": 15000,
+      "energy_counts": {
+        "32": 0,
+        "128": 0,
+        "512": 300
+      },
+      "energy_fracs": {
+        "32": 0.0,
+        "128": 0.0,
+        "512": 1.0
+      }
+    },
+    "ppo_stochastic": {
+      "n_episodes": 10,
+      "mean_return": 13.8,
+      "std_return": 13.884,
+      "min_return": 0.0,
+      "max_return": 35.0,
+      "mean_target_cov": 13.8,
+      "mean_global_cov": 39.3,
+      "mean_targets_reached": 1.9,
+      "mean_queued_items": 31.8,
+      "mean_execs": 15000,
+      "energy_counts": {
+        "32": 136,
+        "128": 96,
+        "512": 265
+      },
+      "energy_fracs": {
+        "32": 0.2736,
+        "128": 0.1932,
+        "512": 0.5332
+      }
+    },
+    "random": {
+      "n_episodes": 10,
+      "mean_return": 21.4,
+      "std_return": 10.259,
+      "min_return": 0.0,
+      "max_return": 35.0,
+      "mean_target_cov": 21.4,
+      "mean_global_cov": 48.5,
+      "mean_targets_reached": 3.4,
+      "mean_queued_items": 39.5,
+      "mean_execs": 15000,
+      "energy_counts": {
+        "32": 248,
+        "128": 233,
+        "512": 223
+      },
+      "energy_fracs": {
+        "32": 0.3523,
+        "128": 0.331,
+        "512": 0.3168
+      }
+    }
+  },
+  "episodes": {
+    "ppo_deterministic": [
+      {
+        "policy": "ppo_deterministic",
+        "episode": 0,
+        "seed": 2000,
+        "ep_steps": 30,
+        "ep_return": 14.0,
+        "budget_used": 15000,
+        "final_target_cov": 14,
+        "final_global_cov": 42,
+        "final_queued_items": 22,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 1,
+        "seed": 2001,
+        "ep_steps": 30,
+        "ep_return": 30.0,
+        "budget_used": 15000,
+        "final_target_cov": 30,
+        "final_global_cov": 49,
+        "final_queued_items": 46,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 2,
+        "seed": 2002,
+        "ep_steps": 30,
+        "ep_return": 32.0,
+        "budget_used": 15000,
+        "final_target_cov": 32,
+        "final_global_cov": 50,
+        "final_queued_items": 56,
+        "aflrun_reached_targets": 5,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 28,
+          "1": 0,
+          "2": 0,
+          "3": 2
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 3,
+        "seed": 2003,
+        "ep_steps": 30,
+        "ep_return": 14.0,
+        "budget_used": 15000,
+        "final_target_cov": 14,
+        "final_global_cov": 44,
+        "final_queued_items": 22,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 4,
+        "seed": 2004,
+        "ep_steps": 30,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 29,
+        "final_queued_items": 15,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 5,
+        "seed": 2005,
+        "ep_steps": 30,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 26,
+        "final_queued_items": 12,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 28,
+          "1": 0,
+          "2": 0,
+          "3": 2
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 6,
+        "seed": 2006,
+        "ep_steps": 30,
+        "ep_return": 23.0,
+        "budget_used": 15000,
+        "final_target_cov": 23,
+        "final_global_cov": 46,
+        "final_queued_items": 30,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 7,
+        "seed": 2007,
+        "ep_steps": 30,
+        "ep_return": 19.0,
+        "budget_used": 15000,
+        "final_target_cov": 19,
+        "final_global_cov": 51,
+        "final_queued_items": 27,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 8,
+        "seed": 2008,
+        "ep_steps": 30,
+        "ep_return": 22.0,
+        "budget_used": 15000,
+        "final_target_cov": 22,
+        "final_global_cov": 40,
+        "final_queued_items": 25,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 29,
+          "1": 0,
+          "2": 0,
+          "3": 1
+        }
+      },
+      {
+        "policy": "ppo_deterministic",
+        "episode": 9,
+        "seed": 2009,
+        "ep_steps": 30,
+        "ep_return": 22.0,
+        "budget_used": 15000,
+        "final_target_cov": 22,
+        "final_global_cov": 52,
+        "final_queued_items": 30,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 0,
+          "128": 0,
+          "512": 30
+        },
+        "energy_fracs": {
+          "32": 0.0,
+          "128": 0.0,
+          "512": 1.0
+        },
+        "slot_counts": {
+          "0": 28,
+          "1": 0,
+          "2": 0,
+          "3": 2
+        }
+      }
+    ],
+    "ppo_stochastic": [
+      {
+        "policy": "ppo_stochastic",
+        "episode": 0,
+        "seed": 2000,
+        "ep_steps": 45,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 31,
+        "final_queued_items": 16,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 10,
+          "128": 8,
+          "512": 27
+        },
+        "energy_fracs": {
+          "32": 0.2222,
+          "128": 0.1778,
+          "512": 0.6
+        },
+        "slot_counts": {
+          "0": 9,
+          "1": 5,
+          "2": 9,
+          "3": 22
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 1,
+        "seed": 2001,
+        "ep_steps": 58,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 30,
+        "final_queued_items": 17,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 21,
+          "128": 12,
+          "512": 25
+        },
+        "energy_fracs": {
+          "32": 0.3621,
+          "128": 0.2069,
+          "512": 0.431
+        },
+        "slot_counts": {
+          "0": 21,
+          "1": 8,
+          "2": 9,
+          "3": 20
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 2,
+        "seed": 2002,
+        "ep_steps": 49,
+        "ep_return": 31.0,
+        "budget_used": 15000,
+        "final_target_cov": 31,
+        "final_global_cov": 51,
+        "final_queued_items": 54,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 16,
+          "128": 6,
+          "512": 27
+        },
+        "energy_fracs": {
+          "32": 0.3265,
+          "128": 0.1224,
+          "512": 0.551
+        },
+        "slot_counts": {
+          "0": 19,
+          "1": 4,
+          "2": 6,
+          "3": 20
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 3,
+        "seed": 2003,
+        "ep_steps": 43,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 27,
+        "final_queued_items": 15,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 9,
+          "128": 6,
+          "512": 28
+        },
+        "energy_fracs": {
+          "32": 0.2093,
+          "128": 0.1395,
+          "512": 0.6512
+        },
+        "slot_counts": {
+          "0": 21,
+          "1": 3,
+          "2": 4,
+          "3": 15
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 4,
+        "seed": 2004,
+        "ep_steps": 49,
+        "ep_return": 19.0,
+        "budget_used": 15000,
+        "final_target_cov": 19,
+        "final_global_cov": 50,
+        "final_queued_items": 54,
+        "aflrun_reached_targets": 2,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 16,
+          "128": 6,
+          "512": 27
+        },
+        "energy_fracs": {
+          "32": 0.3265,
+          "128": 0.1224,
+          "512": 0.551
+        },
+        "slot_counts": {
+          "0": 17,
+          "1": 9,
+          "2": 5,
+          "3": 18
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 5,
+        "seed": 2005,
+        "ep_steps": 46,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 27,
+        "final_queued_items": 15,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 10,
+          "128": 9,
+          "512": 27
+        },
+        "energy_fracs": {
+          "32": 0.2174,
+          "128": 0.1957,
+          "512": 0.587
+        },
+        "slot_counts": {
+          "0": 17,
+          "1": 9,
+          "2": 9,
+          "3": 11
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 6,
+        "seed": 2006,
+        "ep_steps": 48,
+        "ep_return": 35.0,
+        "budget_used": 15000,
+        "final_target_cov": 35,
+        "final_global_cov": 47,
+        "final_queued_items": 46,
+        "aflrun_reached_targets": 5,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 10,
+          "128": 12,
+          "512": 26
+        },
+        "energy_fracs": {
+          "32": 0.2083,
+          "128": 0.25,
+          "512": 0.5417
+        },
+        "slot_counts": {
+          "0": 15,
+          "1": 9,
+          "2": 8,
+          "3": 16
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 7,
+        "seed": 2007,
+        "ep_steps": 52,
+        "ep_return": 6.0,
+        "budget_used": 15000,
+        "final_target_cov": 6,
+        "final_global_cov": 32,
+        "final_queued_items": 18,
+        "aflrun_reached_targets": 1,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 16,
+          "128": 9,
+          "512": 27
+        },
+        "energy_fracs": {
+          "32": 0.3077,
+          "128": 0.1731,
+          "512": 0.5192
+        },
+        "slot_counts": {
+          "0": 17,
+          "1": 9,
+          "2": 7,
+          "3": 19
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 8,
+        "seed": 2008,
+        "ep_steps": 63,
+        "ep_return": 32.0,
+        "budget_used": 15000,
+        "final_target_cov": 32,
+        "final_global_cov": 49,
+        "final_queued_items": 56,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 19,
+          "128": 20,
+          "512": 24
+        },
+        "energy_fracs": {
+          "32": 0.3016,
+          "128": 0.3175,
+          "512": 0.381
+        },
+        "slot_counts": {
+          "0": 18,
+          "1": 16,
+          "2": 13,
+          "3": 16
+        }
+      },
+      {
+        "policy": "ppo_stochastic",
+        "episode": 9,
+        "seed": 2009,
+        "ep_steps": 44,
+        "ep_return": 15.0,
+        "budget_used": 15000,
+        "final_target_cov": 15,
+        "final_global_cov": 49,
+        "final_queued_items": 27,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 9,
+          "128": 8,
+          "512": 27
+        },
+        "energy_fracs": {
+          "32": 0.2045,
+          "128": 0.1818,
+          "512": 0.6136
+        },
+        "slot_counts": {
+          "0": 19,
+          "1": 5,
+          "2": 9,
+          "3": 11
+        }
+      }
+    ],
+    "random": [
+      {
+        "policy": "random",
+        "episode": 0,
+        "seed": 2000,
+        "ep_steps": 76,
+        "ep_return": 31.0,
+        "budget_used": 15000,
+        "final_target_cov": 31,
+        "final_global_cov": 47,
+        "final_queued_items": 65,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 32,
+          "128": 22,
+          "512": 22
+        },
+        "energy_fracs": {
+          "32": 0.4211,
+          "128": 0.2895,
+          "512": 0.2895
+        },
+        "slot_counts": {
+          "0": 13,
+          "1": 23,
+          "2": 22,
+          "3": 18
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 1,
+        "seed": 2001,
+        "ep_steps": 77,
+        "ep_return": 18.0,
+        "budget_used": 15000,
+        "final_target_cov": 18,
+        "final_global_cov": 51,
+        "final_queued_items": 29,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 31,
+          "128": 24,
+          "512": 22
+        },
+        "energy_fracs": {
+          "32": 0.4026,
+          "128": 0.3117,
+          "512": 0.2857
+        },
+        "slot_counts": {
+          "0": 19,
+          "1": 14,
+          "2": 22,
+          "3": 22
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 2,
+        "seed": 2002,
+        "ep_steps": 64,
+        "ep_return": 16.0,
+        "budget_used": 15000,
+        "final_target_cov": 16,
+        "final_global_cov": 53,
+        "final_queued_items": 37,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 21,
+          "128": 20,
+          "512": 23
+        },
+        "energy_fracs": {
+          "32": 0.3281,
+          "128": 0.3125,
+          "512": 0.3594
+        },
+        "slot_counts": {
+          "0": 11,
+          "1": 18,
+          "2": 17,
+          "3": 18
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 3,
+        "seed": 2003,
+        "ep_steps": 70,
+        "ep_return": 32.0,
+        "budget_used": 15000,
+        "final_target_cov": 32,
+        "final_global_cov": 53,
+        "final_queued_items": 48,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 29,
+          "128": 18,
+          "512": 23
+        },
+        "energy_fracs": {
+          "32": 0.4143,
+          "128": 0.2571,
+          "512": 0.3286
+        },
+        "slot_counts": {
+          "0": 14,
+          "1": 17,
+          "2": 16,
+          "3": 23
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 4,
+        "seed": 2004,
+        "ep_steps": 70,
+        "ep_return": 20.0,
+        "budget_used": 15000,
+        "final_target_cov": 20,
+        "final_global_cov": 49,
+        "final_queued_items": 37,
+        "aflrun_reached_targets": 4,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 22,
+          "128": 26,
+          "512": 22
+        },
+        "energy_fracs": {
+          "32": 0.3143,
+          "128": 0.3714,
+          "512": 0.3143
+        },
+        "slot_counts": {
+          "0": 15,
+          "1": 21,
+          "2": 20,
+          "3": 14
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 5,
+        "seed": 2005,
+        "ep_steps": 71,
+        "ep_return": 15.0,
+        "budget_used": 15000,
+        "final_target_cov": 15,
+        "final_global_cov": 42,
+        "final_queued_items": 22,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 28,
+          "128": 20,
+          "512": 23
+        },
+        "energy_fracs": {
+          "32": 0.3944,
+          "128": 0.2817,
+          "512": 0.3239
+        },
+        "slot_counts": {
+          "0": 22,
+          "1": 19,
+          "2": 19,
+          "3": 11
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 6,
+        "seed": 2006,
+        "ep_steps": 62,
+        "ep_return": 35.0,
+        "budget_used": 15000,
+        "final_target_cov": 35,
+        "final_global_cov": 52,
+        "final_queued_items": 53,
+        "aflrun_reached_targets": 5,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 17,
+          "128": 22,
+          "512": 23
+        },
+        "energy_fracs": {
+          "32": 0.2742,
+          "128": 0.3548,
+          "512": 0.371
+        },
+        "slot_counts": {
+          "0": 18,
+          "1": 11,
+          "2": 15,
+          "3": 18
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 7,
+        "seed": 2007,
+        "ep_steps": 86,
+        "ep_return": 16.0,
+        "budget_used": 15000,
+        "final_target_cov": 16,
+        "final_global_cov": 50,
+        "final_queued_items": 35,
+        "aflrun_reached_targets": 3,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 34,
+          "128": 32,
+          "512": 20
+        },
+        "energy_fracs": {
+          "32": 0.3953,
+          "128": 0.3721,
+          "512": 0.2326
+        },
+        "slot_counts": {
+          "0": 19,
+          "1": 29,
+          "2": 24,
+          "3": 14
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 8,
+        "seed": 2008,
+        "ep_steps": 69,
+        "ep_return": 31.0,
+        "budget_used": 15000,
+        "final_target_cov": 31,
+        "final_global_cov": 58,
+        "final_queued_items": 51,
+        "aflrun_reached_targets": 5,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 20,
+          "128": 27,
+          "512": 22
+        },
+        "energy_fracs": {
+          "32": 0.2899,
+          "128": 0.3913,
+          "512": 0.3188
+        },
+        "slot_counts": {
+          "0": 15,
+          "1": 23,
+          "2": 15,
+          "3": 16
+        }
+      },
+      {
+        "policy": "random",
+        "episode": 9,
+        "seed": 2009,
+        "ep_steps": 59,
+        "ep_return": 0.0,
+        "budget_used": 15000,
+        "final_target_cov": 0,
+        "final_global_cov": 30,
+        "final_queued_items": 18,
+        "aflrun_reached_targets": 0,
+        "terminated": true,
+        "truncated": false,
+        "energy_counts": {
+          "32": 14,
+          "128": 22,
+          "512": 23
+        },
+        "energy_fracs": {
+          "32": 0.2373,
+          "128": 0.3729,
+          "512": 0.3898
+        },
+        "slot_counts": {
+          "0": 15,
+          "1": 11,
+          "2": 13,
+          "3": 20
+        }
+      }
+    ]
+  }
+}

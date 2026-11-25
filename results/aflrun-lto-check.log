@@ -1,0 +1,172 @@
+GNUmakefile.llvm:68: you are using an in-development llvm version - this might break llvm_mode!
+[+] llvm_mode detected llvm 10+, enabling neverZero implementation and c++14
+[+] llvm_mode detected llvm 11+, enabling afl-lto LTO implementation
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/clang++ `/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/llvm-config --cxxflags` -fno-rtti -fPIC -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -I ./include/ -DVERSION=\"++4.05c\" -Wno-variadic-macros -Wno-deprecated-copy-with-dtor -DLLVM_MINOR=3 -DLLVM_MAJOR=16 -Wno-deprecated-declarations -Wl,-znodelete -Wno-writable-strings -fno-rtti -fPIC -std=c++17 -shared instrumentation/SanitizerCoverageLTO.so.cc -o SanitizerCoverageLTO.so `/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/bin/llvm-config --ldflags`  instrumentation/split-compares-pass.so.cc instrumentation/aflrun-pass.cc instrumentation/afl-llvm-common.o
+instrumentation/SanitizerCoverageLTO.so.cc:210:36: error: use of undeclared identifier 'None'
+                   MDNode::get(*C, None));
+                                   ^
+instrumentation/SanitizerCoverageLTO.so.cc:1832:8: error: unknown type name 'RegisterStandardPasses'
+static RegisterStandardPasses RegisterCompTransPass(
+       ^
+instrumentation/SanitizerCoverageLTO.so.cc:1833:25: error: no member named 'EP_OptimizerLast' in 'llvm::PassManagerBuilder'
+    PassManagerBuilder::EP_OptimizerLast, registerLTOPass);
+    ~~~~~~~~~~~~~~~~~~~~^
+instrumentation/SanitizerCoverageLTO.so.cc:1835:8: error: unknown type name 'RegisterStandardPasses'
+static RegisterStandardPasses RegisterCompTransPass0(
+       ^
+instrumentation/SanitizerCoverageLTO.so.cc:1836:25: error: no member named 'EP_EnabledOnOptLevel0' in 'llvm::PassManagerBuilder'
+    PassManagerBuilder::EP_EnabledOnOptLevel0, registerLTOPass);
+    ~~~~~~~~~~~~~~~~~~~~^
+instrumentation/SanitizerCoverageLTO.so.cc:1839:8: error: unknown type name 'RegisterStandardPasses'
+static RegisterStandardPasses RegisterCompTransPassLTO(
+       ^
+instrumentation/SanitizerCoverageLTO.so.cc:1840:25: error: no member named 'EP_FullLinkTimeOptimizationLast' in 'llvm::PassManagerBuilder'
+    PassManagerBuilder::EP_FullLinkTimeOptimizationLast, registerLTOPass);
+    ~~~~~~~~~~~~~~~~~~~~^
+7 errors generated.
+instrumentation/split-compares-pass.so.cc:268:9: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+    bb->getInstList().insert(BasicBlock::iterator(bb->getTerminator()),
+    ~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:277:16: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+    middle_bb->getInstList().push_back(fcmp_eq);
+    ~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:298:48: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+    ReplaceInstWithInst(FcmpInst->getParent()->getInstList(), ii, PN);
+                        ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:298:5: error: no matching function for call to 'ReplaceInstWithInst'
+    ReplaceInstWithInst(FcmpInst->getParent()->getInstList(), ii, PN);
+    ^~~~~~~~~~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:126:6: note: candidate function not viable: no known conversion from 'InstListType' (aka 'SymbolTableList<Instruction>') to 'BasicBlock *' for 1st argument
+void ReplaceInstWithInst(BasicBlock *BB, BasicBlock::iterator &BI,
+     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:131:6: note: candidate function not viable: requires 2 arguments, but 3 were provided
+void ReplaceInstWithInst(Instruction *From, Instruction *To);
+     ^
+instrumentation/split-compares-pass.so.cc:355:7: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  bb->getInstList().insert(BasicBlock::iterator(bb->getTerminator()), icmp_np);
+  ~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:363:14: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  middle_bb->getInstList().push_back(icmp_eq);
+  ~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:384:46: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  ReplaceInstWithInst(IcmpInst->getParent()->getInstList(), ii, PN);
+                      ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:384:3: error: no matching function for call to 'ReplaceInstWithInst'
+  ReplaceInstWithInst(IcmpInst->getParent()->getInstList(), ii, PN);
+  ^~~~~~~~~~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:126:6: note: candidate function not viable: no known conversion from 'InstListType' (aka 'SymbolTableList<Instruction>') to 'BasicBlock *' for 1st argument
+void ReplaceInstWithInst(BasicBlock *BB, BasicBlock::iterator &BI,
+     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:131:6: note: candidate function not viable: requires 2 arguments, but 3 were provided
+void ReplaceInstWithInst(Instruction *From, Instruction *To);
+     ^
+instrumentation/split-compares-pass.so.cc:464:12: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  sign_bb->getInstList().push_back(icmp_inv_sig_cmp);
+  ~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:474:14: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  middle_bb->getInstList().push_back(icmp_usign_cmp);
+  ~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:489:46: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  ReplaceInstWithInst(IcmpInst->getParent()->getInstList(), ii, PN);
+                      ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:489:3: error: no matching function for call to 'ReplaceInstWithInst'
+  ReplaceInstWithInst(IcmpInst->getParent()->getInstList(), ii, PN);
+  ^~~~~~~~~~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:126:6: note: candidate function not viable: no known conversion from 'InstListType' (aka 'SymbolTableList<Instruction>') to 'BasicBlock *' for 1st argument
+void ReplaceInstWithInst(BasicBlock *BB, BasicBlock::iterator &BI,
+     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:131:6: note: candidate function not viable: requires 2 arguments, but 3 were provided
+void ReplaceInstWithInst(Instruction *From, Instruction *To);
+     ^
+instrumentation/split-compares-pass.so.cc:663:19: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+      inv_cmp_bb->getInstList().push_back(icmp_inv_cmp);
+      ~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:674:19: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+      cmp_low_bb->getInstList().push_back(op0_low);
+      ~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:676:19: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+      cmp_low_bb->getInstList().push_back(op1_low);
+      ~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:679:19: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+      cmp_low_bb->getInstList().push_back(icmp_low);
+      ~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:700:46: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+  ReplaceInstWithInst(cmp_inst->getParent()->getInstList(), ii, PN);
+                      ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+instrumentation/split-compares-pass.so.cc:700:3: error: no matching function for call to 'ReplaceInstWithInst'
+  ReplaceInstWithInst(cmp_inst->getParent()->getInstList(), ii, PN);
+  ^~~~~~~~~~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:126:6: note: candidate function not viable: no known conversion from 'InstListType' (aka 'SymbolTableList<Instruction>') to 'BasicBlock *' for 1st argument
+void ReplaceInstWithInst(BasicBlock *BB, BasicBlock::iterator &BI,
+     ^
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/Transforms/Utils/BasicBlockUtils.h:131:6: note: candidate function not viable: requires 2 arguments, but 3 were provided
+void ReplaceInstWithInst(Instruction *From, Instruction *To);
+     ^
+instrumentation/split-compares-pass.so.cc:947:9: error: 'getInstList' is a private member of 'llvm::BasicBlock'
+    bb->getInstList().insert(BasicBlock::iterator(bb->getTerminator()),
+    ~~~~^~~~~~~~~~~
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/IR/BasicBlock.h:383:17: note: declared private here
+  InstListType &getInstList() { return InstList; }
+                ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+instrumentation/aflrun-pass.cc:608:32: error: no member named 'Create' in 'llvm::StringMapEntry<llvm::Value *>'; did you mean 'create'?
+                                BB.setValueName(ValueName::Create(NameRef, Allocator));
+                                                ~~~~~~~~~~~^~~~~~
+                                                           create
+/home/sylei/RL_miniproject/toolchain/llvm-16.0.3/include/llvm/ADT/StringMapEntry.h:126:26: note: 'create' declared here
+  static StringMapEntry *create(StringRef key, AllocatorTy &allocator,
+                         ^
+instrumentation/aflrun-pass.cc:990:44: error: use of undeclared identifier 'None'
+                                                M.getMDKindID("laf"), MDNode::get(C, None));
+                                                                                     ^
+instrumentation/aflrun-pass.cc:992:44: error: use of undeclared identifier 'None'
+                                                M.getMDKindID("laf"), MDNode::get(C, None));
+                                                                                     ^
+instrumentation/aflrun-pass.cc:994:44: error: use of undeclared identifier 'None'
+                                                M.getMDKindID("laf"), MDNode::get(C, None));
+                                                                                     ^
+4 errors generated.
+make: *** [GNUmakefile.llvm:446: SanitizerCoverageLTO.so] Error 1

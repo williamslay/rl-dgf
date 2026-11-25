@@ -1,0 +1,18 @@
+{
+  "target": "pilot",
+  "target_bin": "/home/sylei/RL_miniproject/benchmarks/pilot-target/target",
+  "total_timesteps_requested": 15360,
+  "actual_timesteps": 15360,
+  "episode_budget": 15000,
+  "n_steps": 512,
+  "batch_size": 64,
+  "n_epochs": 10,
+  "learning_rate": 0.0003,
+  "gamma": 0.99,
+  "ent_coef": 0.01,
+  "seed": 42,
+  "wall_seconds": 393.309,
+  "episodes_completed": 272,
+  "final_model_path": "/home/sylei/RL_miniproject/results/phase1b/pilot_ppo/checkpoints/ppo_final.zip",
+  "load_verify_action": 2
+}

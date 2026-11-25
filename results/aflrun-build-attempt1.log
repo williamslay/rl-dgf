@@ -1,0 +1,196 @@
+[*] Compiling afl++ for OS Linux on ARCH x86_64
+rm -rf afl-fuzz afl-showmap afl-tmin afl-gotcpu afl-analyze afl-fuzz-document afl-as as afl-g++ afl-clang afl-clang++ *.o src/*.o *~ a.out core core.[1-9][0-9]* *.stackdump .test .test1 .test2 test-instr .test-instr0 .test-instr1 afl-cs-proxy afl-qemu-trace afl-gcc-fast afl-g++-fast ld *.so *.8 test/unittests/*.o test/unittests/unit_maybe_alloc test/unittests/preallocable .afl-* afl-gcc afl-g++ afl-clang afl-clang++ test/unittests/unit_hash test/unittests/unit_rand *.dSYM lib*.a
+make -f GNUmakefile.llvm clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun'
+GNUmakefile.llvm:68: you are using an in-development llvm version - this might break llvm_mode!
+[+] llvm_mode detected llvm 10+, enabling neverZero implementation and c++14
+[+] llvm_mode detected llvm 11+, enabling afl-lto LTO implementation
+GNUmakefile.llvm:119: we have trouble finding clang - llvm-config is not helping us
+GNUmakefile.llvm:134: we have trouble finding clang++ - llvm-config is not helping us
+GNUmakefile.llvm:233: clang option -flto is not working - maybe LLVMgold.so not found - cannot enable LTO mode
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]* .test2 test-instr .test-instr0 .test-instr1 *.dwo
+rm -f ./afl-cc ./aflrun-cc ./afl-compiler-rt.o ./afl-compiler-rt-32.o ./afl-compiler-rt-64.o ./afl-llvm-pass.so ./lto-marker.so ./SanitizerCoveragePCGUARD.so ./split-switches-pass.so ./cmplog-routines-pass.so ./cmplog-instructions-pass.so ./cmplog-switches-pass.so ./afl-llvm-dict2file.so ./compare-transform-pass.so ./afl-ld-lto ./afl-llvm-lto-instrumentlist.so ./SanitizerCoverageLTO.so afl-common.o ./afl-c++ ./afl-lto ./afl-lto++ ./afl-clang-lto* ./afl-clang-fast* ./afl-clang*.8 ./ld ./afl-ld ./afl-compiler-rt*.o ./afl-llvm-rt*.o instrumentation/*.o
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun'
+make -f GNUmakefile.gcc_plugin clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]* test-instr .test-instr0 .test-instr1 .test2
+rm -f ./afl-gcc-pass.so ./afl-gcc-cmplog-pass.so ./afl-gcc-cmptrs-pass.so ./afl-compiler-rt.o ./afl-compiler-rt-32.o ./afl-compiler-rt-64.o afl-common.o ./afl-g++-fast ./afl-g*-fast.8 instrumentation/*.o
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun'
+make -C utils/libdislocator clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/libdislocator'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -f ../../libdislocator.so
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/libdislocator'
+make -C utils/libtokencap clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/libtokencap'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -fv ../../libtokencap.so
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/libtokencap'
+make -C utils/aflpp_driver clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/aflpp_driver'
+rm -f *.o libAFLDriver*.a libAFLQemuDriver.a aflpp_qemu_driver_hook.so *~ core aflpp_driver_test
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/aflpp_driver'
+make -C utils/afl_network_proxy clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/afl_network_proxy'
+rm -f afl-network-client afl-network-server *~ core
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/afl_network_proxy'
+make -C utils/socket_fuzzing clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/socket_fuzzing'
+rm -f socketfuzz32.so socketfuzz64.so
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/socket_fuzzing'
+make -C utils/argv_fuzzing clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/argv_fuzzing'
+rm -f argvfuzz32.so argvfuzz64.so argv_fuzz_demo argv_fuzz_persistent_demo
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/argv_fuzzing'
+make -C utils/plot_ui clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/utils/plot_ui'
+rm -f afl-plot-ui
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/utils/plot_ui'
+make -C qemu_mode/unsigaction clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/unsigaction'
+rm -f unsigaction.so
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/unsigaction'
+make -C qemu_mode/fastexit clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/fastexit'
+rm -f fastexit.so
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/fastexit'
+make -C qemu_mode/libcompcov clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/libcompcov'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -f ../../libcompcov.so compcovtest
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/libcompcov'
+make -C qemu_mode/libqasan clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/libqasan'
+rm -f *.o *.so *~ a.out core core.[1-9][0-9]*
+rm -f ../../libqasan.so
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/qemu_mode/libqasan'
+make -C frida_mode clean
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun/frida_mode'
+rm -rf /home/sylei/rl-dgf/backend/AFLRun/frida_mode/build/
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun/frida_mode'
+rm -rf nyx_mode/packer/linux_initramfs/init.cpio.gz nyx_mode/libnyx/libnyx/target/release/* nyx_mode/QEMU-Nyx/x86_64-softmmu/qemu-system-x86_64
+test -e coresight_mode/coresight-trace/Makefile && make -C coresight_mode/coresight-trace clean || true
+test -e qemu_mode/qemuafl/Makefile && make -C qemu_mode/qemuafl clean || true
+test -e unicorn_mode/unicornafl/Makefile && make -C unicorn_mode/unicornafl clean || true
+test -e nyx_mode/QEMU-Nyx/Makefile && make -C nyx_mode/QEMU-Nyx clean || true
+[*] Checking for the default compiler cc...
+[*] Testing the PATH environment variable...
+[*] Checking for the ability to compile x86 code...
+[+] shmat seems to be working.
+[+] Python 3.12.3 support seems to be working.
+[+] Everything seems to be working, ready to compile.
+g++ -O2 -march=native -D_FORTIFY_SOURCE=1 -g -Wall -std=c++14 -I robin-hood-hashing/src/include/ -I include/  -flto src/aflrun.cpp -c -o src/aflrun.o
+src/aflrun.cpp:2672:8: warning: ‘size_t std::hash<{anonymous}::SeedFringes>::operator()(const {anonymous}::SeedFringes&) const’ defined but not used [-Wunused-function]
+ 2672 | size_t hash<SeedFringes>::operator()(const SeedFringes& p) const noexcept
+      |        ^~~~~~~~~~~~~~~~~
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" -flto -c src/afl-common.c -o src/afl-common.o
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" -flto -c src/afl-sharedmem.c -o src/afl-sharedmem.o
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" -flto -c src/afl-forkserver.c -o src/afl-forkserver.o
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" -march=native -D_FORTIFY_SOURCE=1 -Iinclude -c src/afl-performance.c -o src/afl-performance.o
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -flto src/afl-fuzz-bitmap.c src/afl-fuzz.c src/afl-fuzz-cmplog.c src/afl-fuzz-extras.c src/afl-fuzz-init.c src/afl-fuzz-mutators.c src/afl-fuzz-one.c src/afl-fuzz-python.c src/afl-fuzz-queue.c src/afl-fuzz-redqueen.c src/afl-fuzz-run.c src/afl-fuzz-state.c src/afl-fuzz-stats.c src/afl-fuzz-statsd.c src/afl-common.o src/afl-sharedmem.o src/afl-forkserver.o src/afl-performance.o src/aflrun.o -o afl-fuzz -DUSE_PYTHON -I/usr/include/python3.12 -I/usr/include/python3.12 -ldl -lrt -lm -lpython3.12 -ldl  -lm  -L/usr/lib/python3.12/config-3.12-x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -lpython3.12 -ldl  -lm  -DPYTHON_VERSION="\"Python 3.12.3\"" -ldl -lrt -lm -lm -lstdc++
+src/afl-fuzz-python.c: In function ‘load_custom_mutator_py’:
+src/afl-fuzz-python.c:441:36: warning: assignment to ‘u32 (*)(void *, const u8 *, size_t,  u32)’ {aka ‘unsigned int (*)(void *, const unsigned char *, long unsigned int,  unsigned int)’} from incompatible pointer type ‘u32 (*)(void *, const u8 *, size_t)’ {aka ‘unsigned int (*)(void *, const unsigned char *, long unsigned int)’} [-Wincompatible-pointer-types]
+  441 |     mutator->afl_custom_fuzz_count = fuzz_count_py;
+      |                                    ^
+lto-wrapper: warning: using serial compilation of 12 LTRANS jobs
+lto-wrapper: note: see the ‘-flto’ option documentation for more information
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -flto src/afl-showmap.c src/afl-common.o src/afl-sharedmem.o src/afl-forkserver.o src/afl-performance.o -o afl-showmap -ldl -lrt -lm
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -flto src/afl-tmin.c src/afl-common.o src/afl-sharedmem.o src/afl-forkserver.o src/afl-performance.o -o afl-tmin -ldl -lrt -lm
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -flto src/afl-gotcpu.c src/afl-common.o -o afl-gotcpu -ldl -lrt -lm
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\"  -flto src/afl-analyze.c src/afl-common.o src/afl-sharedmem.o src/afl-performance.o src/afl-forkserver.o -o afl-analyze -ldl -lrt -lm
+cc -O2 -march=native -D_FORTIFY_SOURCE=1  -g -Wno-pointer-sign -Wno-variadic-macros -Wall -Wextra -Wno-pointer-arith -fPIC -I include/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DDOC_PATH=\"/usr/local/share/doc/afl\" src/afl-as.c -o afl-as -ldl -lrt -lm
+make -j -f GNUmakefile.llvm
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun'
+GNUmakefile.llvm:68: you are using an in-development llvm version - this might break llvm_mode!
+[+] llvm_mode detected llvm 10+, enabling neverZero implementation and c++14
+[+] llvm_mode detected llvm 11+, enabling afl-lto LTO implementation
+GNUmakefile.llvm:119: we have trouble finding clang - llvm-config is not helping us
+GNUmakefile.llvm:134: we have trouble finding clang++ - llvm-config is not helping us
+GNUmakefile.llvm:233: clang option -flto is not working - maybe LLVMgold.so not found - cannot enable LTO mode
+[+] shmat seems to be working.
+[*] Checking for working 'llvm-config'...
+[*] Checking for working 'cc'...
+[*] Checking for matching versions of 'cc' and 'llvm-config'
+[!] WARNING: we have llvm-config version 18.1.3 and a clang version 
+[*] Checking for './afl-showmap'...
+[+] All set and ready to build.
+cc -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/usr/lib/llvm-18/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/usr/lib/llvm-18/lib\" -DLLVM_VERSION=\"18.1.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/usr/lib/llvm-18/bin/clang\" -DCLANGPP_BIN=\"/usr/lib/llvm-18/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function  -Wno-deprecated  -c src/afl-common.c -o instrumentation/afl-common.o 
+cc -I/usr/lib/llvm-18/include -I./../include -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/usr/lib/llvm-18/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/usr/lib/llvm-18/lib\" -DLLVM_VERSION=\"18.1.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/usr/lib/llvm-18/bin/clang\" -DCLANGPP_BIN=\"/usr/lib/llvm-18/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function  -Wno-deprecated  src/afl-cc.c instrumentation/afl-common.o -o afl-cc -DLLVM_MINOR=3 -DLLVM_MAJOR=18  -DCFLAGS_OPT=\"\" -lm
+In file included from src/afl-cc.c:24:
+src/afl-cc.c: In function ‘main’:
+src/afl-cc.c:1862:35: warning: ‘__builtin_snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+ 1862 |           u8 *ptr4 = alloc_printf("%u", ctx_k);
+      |                                   ^~~~
+./include/alloc-inl.h:56:40: note: in definition of macro ‘alloc_printf’
+   56 |       snprintf((char *)_tmp, _len + 1, _str);          \
+      |                                        ^~~~
+src/afl-cc.c:1862:38: note: format string is defined here
+ 1862 |           u8 *ptr4 = alloc_printf("%u", ctx_k);
+      |                                      ^
+In file included from /usr/include/stdio.h:980,
+                 from ./include/common.h:30,
+                 from src/afl-cc.c:20:
+In function ‘snprintf’,
+    inlined from ‘main’ at src/afl-cc.c:1862:22:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:54:10: note: ‘__builtin_snprintf’ output between 2 and 4 bytes into a destination of size 3
+   54 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   55 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   56 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+src/afl-cc.c: In function ‘main’:
+src/afl-cc.c:1905:33: warning: ‘__builtin_snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+ 1905 |         u8 *ptr4 = alloc_printf("%u", ngram_size);
+      |                                 ^~~~
+./include/alloc-inl.h:56:40: note: in definition of macro ‘alloc_printf’
+   56 |       snprintf((char *)_tmp, _len + 1, _str);          \
+      |                                        ^~~~
+src/afl-cc.c:1905:36: note: format string is defined here
+ 1905 |         u8 *ptr4 = alloc_printf("%u", ngram_size);
+      |                                    ^
+In function ‘snprintf’,
+    inlined from ‘main’ at src/afl-cc.c:1905:20:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:54:10: note: ‘__builtin_snprintf’ output between 2 and 4 bytes into a destination of size 3
+   54 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   55 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   56 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+cc -I/usr/lib/llvm-18/include -I./../include -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/usr/lib/llvm-18/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/usr/lib/llvm-18/lib\" -DLLVM_VERSION=\"18.1.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/usr/lib/llvm-18/bin/clang\" -DCLANGPP_BIN=\"/usr/lib/llvm-18/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function  -Wno-deprecated  src/aflrun-cc.c -o aflrun-cc -DLLVM_MINOR=3 -DLLVM_MAJOR=18  -DCFLAGS_OPT=\"\" -lm
+cc -I/usr/lib/llvm-18/include -I./../include -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/usr/lib/llvm-18/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/usr/lib/llvm-18/lib\" -DLLVM_VERSION=\"18.1.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/usr/lib/llvm-18/bin/clang\" -DCLANGPP_BIN=\"/usr/lib/llvm-18/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function  -Wno-deprecated  -O3 -Wno-unused-result -fPIC -c instrumentation/afl-compiler-rt.o.c -o afl-compiler-rt.o
+instrumentation/afl-compiler-rt.o.c:1470:1: warning: constructor priorities from 0 to 100 are reserved for the implementation [-Wprio-ctor-dtor]
+ 1470 | __attribute__((constructor(EARLY_FS_PRIO))) void __early_forkserver(void) {
+      | ^~~~~~~~~~~~~
+instrumentation/afl-compiler-rt.o.c:1478:1: warning: constructor priorities from 0 to 100 are reserved for the implementation [-Wprio-ctor-dtor]
+ 1478 | __attribute__((constructor(CTOR_PRIO))) void __afl_auto_early(void) {
+      | ^~~~~~~~~~~~~
+instrumentation/afl-compiler-rt.o.c:1513:1: warning: constructor priorities from 0 to 100 are reserved for the implementation [-Wprio-ctor-dtor]
+ 1513 | __attribute__((constructor(1))) void __afl_auto_second(void) {
+      | ^~~~~~~~~~~~~
+instrumentation/afl-compiler-rt.o.c:1557:1: warning: constructor priorities from 0 to 100 are reserved for the implementation [-Wprio-ctor-dtor]
+ 1557 | __attribute__((constructor(0))) void __afl_auto_first(void) {
+      | ^~~~~~~~~~~~~
+[*] Building 32-bit variant of the runtime (-m32)... failed (that's fine)
+[*] Building 64-bit variant of the runtime (-m64)... success!
+c++ -O3 -funroll-loops -fPIC -D_FORTIFY_SOURCE=1 -Wall -g -Wno-cast-qual -Wno-variadic-macros -Wno-pointer-sign -I ./include/ -I ./instrumentation/ -DAFL_PATH=\"/usr/local/lib/afl\" -DBIN_PATH=\"/usr/local/bin\" -DLLVM_BINDIR=\"/usr/lib/llvm-18/bin\" -DVERSION=\"++4.05c\" -DLLVM_LIBDIR=\"/usr/lib/llvm-18/lib\" -DLLVM_VERSION=\"18.1.3\" -DAFL_CLANG_FLTO=\"\" -DAFL_REAL_LD=\"\" -DAFL_CLANG_LDPATH=\"\" -DAFL_CLANG_FUSELD=\"\" -DCLANG_BIN=\"/usr/lib/llvm-18/bin/clang\" -DCLANGPP_BIN=\"/usr/lib/llvm-18/bin/clang++\" -DUSE_BINDIR=1 -Wno-unused-function  -Wno-deprecated  `llvm-config --cxxflags` -fno-rtti -fPIC -std=c++14 -c instrumentation/afl-llvm-common.cc -o instrumentation/afl-llvm-common.o 
+cc1plus: warning: command-line option ‘-Wno-pointer-sign’ is valid for C/ObjC but not for C++
+In file included from instrumentation/afl-llvm-common.cc:19:
+instrumentation/afl-llvm-common.h:24:10: fatal error: llvm/Transforms/IPO/PassManagerBuilder.h: No such file or directory
+   24 | #include "llvm/Transforms/IPO/PassManagerBuilder.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [GNUmakefile.llvm:416: instrumentation/afl-llvm-common.o] Error 1
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun'
+make: [GNUmakefile:345: llvm] Error 2 (ignored)
+make -f GNUmakefile.gcc_plugin
+make[1]: Entering directory '/home/sylei/rl-dgf/backend/AFLRun'
+[+] shmat seems to be working.
+[*] Checking for working 'cc'...
+[*] Checking for gcc plugin development header files...
+[-] Oops, can't find gcc header files. Be sure to install 'gcc-X-plugin-dev'.
+make[1]: *** [GNUmakefile.gcc_plugin:125: test_deps] Error 1
+make[1]: Leaving directory '/home/sylei/rl-dgf/backend/AFLRun'
+make: [GNUmakefile:351: gcc_plugin] Error 2 (ignored)
+make: *** No rule to make target 'afl-clang-lto', needed by 'test_build'.  Stop.

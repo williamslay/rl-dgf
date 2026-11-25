@@ -1,0 +1,97 @@
+{
+  "check_env": {
+    "passed": true
+  },
+  "default_10k_episode": {
+    "passed": true,
+    "steps": 33,
+    "budget_used": 10000,
+    "init_dry_run_execs": 7,
+    "wall_s": 0.917,
+    "throughput_execs_per_sec": 10906.57,
+    "final_queued_items": 13,
+    "init_target_cov": 0,
+    "final_target_cov": 0,
+    "cumulative_reward": 0.0,
+    "final_global_cov": 19,
+    "final_aflrun_reached_targets": 0,
+    "mean_ipc_roundtrip_us": 25564.5,
+    "p95_ipc_roundtrip_us": 43744.0,
+    "mean_step_fuzz_us": 25455.3
+  },
+  "steps_100plus_and_controls": {
+    "passed": true,
+    "total_steps": 124,
+    "final_queued_items": 18,
+    "distinct_seeds_executed": [
+      0,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "slot_test_seed_ids": [
+      16,
+      15,
+      13,
+      11
+    ],
+    "energy_stats": {
+      "32": {
+        "count": 35,
+        "exact_no_cal_count": 35,
+        "min_actual": 32,
+        "max_actual": 32,
+        "mean_actual": 32
+      },
+      "128": {
+        "count": 41,
+        "exact_no_cal_count": 37,
+        "min_actual": 128,
+        "max_actual": 128,
+        "mean_actual": 128
+      },
+      "512": {
+        "count": 43,
+        "exact_no_cal_count": 38,
+        "min_actual": 512,
+        "max_actual": 512,
+        "mean_actual": 512
+      }
+    },
+    "cal_overrun_count": 9,
+    "init_target_cov": 0,
+    "final_target_cov": 4,
+    "cumulative_reward": 4.0,
+    "jsonl_log": "/home/sylei/RL_miniproject/results/phase1a/steps_100plus.jsonl"
+  },
+  "consecutive_resets": {
+    "passed": true,
+    "resets_completed": 12,
+    "shm_before": 108,
+    "shm_after": 108,
+    "fd_before": 9,
+    "fd_after": 9,
+    "leaked_child_afl_processes": 0
+  },
+  "fixed_seed_reproducibility": {
+    "passed": true,
+    "exact_match": true,
+    "steps_compared": 21,
+    "mismatch_count": 0,
+    "mismatches_sample": []
+  },
+  "native_aflrun_regression": {
+    "passed": true,
+    "returncode": 0,
+    "execs_done": 57554,
+    "execs_per_sec": 11480.95,
+    "corpus_count": 16
+  }
+}
